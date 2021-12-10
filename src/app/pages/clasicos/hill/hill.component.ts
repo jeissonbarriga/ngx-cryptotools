@@ -229,8 +229,31 @@ export class HillComponent {
   return scannedData
   };
 
+  inverse_decipher(key_m){           // Función que calcula la inversa de una matriz 2x2 mod
+    const det= Math.abs((key_m[0]*key_m[3])-(key_m[1]*key_m[2]));
+    //console.log(det mod)
+    var fn_key = new Array;
+    fn_key.push((key_m[3]));
+    fn_key.push((-key_m[1]));
+    fn_key.push((-key_m[2]));
+    fn_key.push((key_m[0]));
+    //console.log("transpuesta",fn_key)
+    for(var k=0; k <= 256; k++){
+        //console.log("k",k)
+        //console.log("det x k % 256",((det)*k)%256)
+        if(((det*k)%256)==1){
+            fn_key[0]=(((fn_key[0]+(256))*k))%256;
+            fn_key[1]=(((fn_key[1]+(256))*k))%256;
+            fn_key[2]=(((fn_key[2]+(256))*k))%256;
+            fn_key[3]=(((fn_key[3]+(256))*k))%256;
+            console.log("Key inversa = ", fn_key,k);
+            return fn_key
+        }
+    }
+  };
+
   Hill_decipher(key,width,height,scannedData){  // Función que decifra la imagen pos. [j,j+4,j+ancho,j+4+ancho] con key [k_0, k_1, k_2, k_3]^-1
-    const inv_key = this.inverse(key);
+    const inv_key = this.inverse_decipher(key);
     //console.log(height,width)
     for (var i = 0; i <=  ((4*width*height)) ; i+=(8*width) ){
         //console.log(i)

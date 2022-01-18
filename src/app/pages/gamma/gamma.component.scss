@@ -13,3 +13,33 @@ nb-checkbox {
 nb-card.inline-form-card nb-card-body {
   padding-bottom: 0;
 }
+
+.fix-width {
+  width: -webkit-fill-available;
+}
+
+.center-vertically {
+  position: relative;
+  top: 25%;
+}
+
+.stretch-content {
+  display: flex;
+  width: -webkit-fill-available;
+  align-items: stretch;
+}
+
+.canvas {
+  border: 1px #edf1f7 solid;
+  border-radius: 0.25rem;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.large-input {
+  height: 150px;
+}

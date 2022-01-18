@@ -39,6 +39,30 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ]
   },
   {
+    title: 'Criptosistemas de Bloque',
+    icon: 'unlock-outline',
+    link: '/pages/bloque',
+    children: [
+      {
+        title: 'S-DES',
+        link: '/pages/bloque/sdes',
+      },
+      {
+        title: 'DES',
+        link: '/pages/bloque/des',
+      },
+      {
+        title: 'T-DES',
+        link: '/pages/bloque/tdes',
+      },
+      {
+        title: 'AES',
+        link: '/pages/bloque/aes',
+      },
+      
+    ]
+  },
+  {
     title: 'Gamma Pentagonal',
     icon: 'keypad-outline',
     link: '/pages/gamma',

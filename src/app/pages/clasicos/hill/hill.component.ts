@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { NbDialogService } from '@nebular/theme';
-import { DialogoComponent } from '../dialogo/dialogo.component';
+import { DialogoComponent } from '../../dialogo/dialogo.component';
 
 @Component({
   selector: 'ngx-hill',

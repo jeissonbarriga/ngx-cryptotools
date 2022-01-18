@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NbDialogService } from '@nebular/theme';
 import { MathService } from '../../common-services/math.service';
 import { TextUtilService } from '../../common-services/text-util.service';
-import { DialogoComponent } from '../dialogo/dialogo.component';
+import { DialogoComponent } from '../../dialogo/dialogo.component';
 
 @Component({
   selector: 'ngx-afin',

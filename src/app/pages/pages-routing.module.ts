@@ -20,6 +20,11 @@ const routes: Routes = [{
         .then(m => m.ClasicosModule),
     },
     {
+      path: 'bloque',
+      loadChildren: () => import('./bloque/bloque.module')
+        .then(m => m.BloqueModule),
+    },
+    {
       path: 'gamma',
       component: GammaComponent,
     },

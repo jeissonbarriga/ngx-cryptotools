@@ -29,6 +29,11 @@ const routes: Routes = [{
       component: GammaComponent,
     },
     {
+      path: 'publica',
+      loadChildren: () => import('./publica/publica.module')
+        .then(m => m.PublicaModule),
+    },
+    {
       path: '',
       redirectTo: 'home',
       pathMatch: 'full',

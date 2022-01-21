@@ -66,5 +66,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Gamma Pentagonal',
     icon: 'keypad-outline',
     link: '/pages/gamma',
-  }
+  },
+  {
+    title: 'LLave Pública',
+    icon: 'unlock-outline',
+    link: '/pages/bloque',
+    children: [
+      {
+        title: 'RSA',
+        link: '/pages/publica/rsa',
+      },
+      
+    ]
+  },
 ];
